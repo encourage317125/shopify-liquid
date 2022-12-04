@@ -1,0 +1,226 @@
+{% comment %}
+  Template used sitewide for each time a product is displayed.
+  This template handles the product/variant images, showing product information and variants.
+  At the bottom of the html is a script that dynamically show price and updates the selected variant ID.
+  The script for adding the product to the cart is in scripts.js.
+{% endcomment %}
+
+<div class="trago_row">
+
+  <!-- Variant Images -->
+
+  <div class="column_1_2">
+
+    <div class="flexslider product_slider">
+      <ul class="slides">
+        {% for image in product.images %}
+          <li data-image-id="{{ image.id }}" data-thumb="{{ image | product_img_url: 'medium' }}">
+            <img src="{{ image | product_img_url: 'original' }}" data-image-id="{{ image.id }}"/>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Product Information -->
+
+  <div class="column_1_2">
+    <form id="product_form">
+
+      <!-- Title / Description -->
+
+      <div class="product_information_header">
+        <h3>{{ product.title }}</h3>
+        {% unless product.type == blank %}
+          <h3 class="font_medium">{{ product.type }}</h3>
+        {% endunless %}
+        {% unless product.description == blank %}
+          <p>{{ product.description }}</p>
+        {% endunless %}
+      </div>
+
+      <!-- Variants -->
+
+      {% if product.variants.size > 1 %}
+        {% if product.options[0] %}
+
+          <div class="product_variant_container">
+
+            {% if product.options[0] == 'Color' %}
+
+              <div class="trago_color_variants">
+                <label for="color">
+                  <h3 class="font_medium">{{ product.options[0] }}</h3>
+                </label>
+                {% assign used = '' %}
+                {% for variant in product.variants %}
+                  {% unless used contains variant.option1 %}
+                    <input type="radio" name="color" {% if forloop.first %}checked="checked"{% endif %} value="{{ variant.option1 }}" data-id="{{ variant.id }}" onclick="updateProductInformation()" style="background: {{ variant.metafields.c_f.hex_code }}">
+                    {% capture used %}
+                      {{ used }} {{ variant.option1 }}{% endcapture %}
+                  {% endunless %}
+                {% endfor %}
+              </div>
+
+            {% else %}
+
+              {% assign used = '' %}
+              <label for="select_one">
+                <h3 class="font_medium">{{ product.options[0] }}</h3>
+              </label>
+              <div class="trago_select_container">
+                <select id='select_one' onchange="updateProductInformation()">
+                  {% for variant in product.variants %}
+                    {% unless used contains variant.option1 %}
+                      <option value="{{ variant.option1 }}">{{ variant.option1 }}</option>
+                      {% capture used %}
+                        {{ used }} {{ variant.option1 }}{% endcapture %}
+                    {% endunless %}
+                  {% endfor %}
+                </select>
+              </div>
+
+            {% endif %}
+
+          </div>
+
+        {% endif %}
+
+        {% if product.options[1] %}
+
+          <div class="product_variant_container">
+            {% assign used = '' %}
+            <label for="select_two">
+              <h3 class="font_medium">{{ product.options[1] }}</h3>
+            </label>
+            <div class="trago_select_container">
+              <select id='select_two' onchange="updateProductInformation()">
+                {% for variant in product.variants %}
+                  {% unless used contains variant.option2 %}
+                    <option value="{{ variant.option2 }}">{{ variant.option2 }}</option>
+                    {% capture used %}
+                      {{ used }} {{ variant.option2 }}{% endcapture %}
+                  {% endunless %}
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+
+        {% endif %}
+
+        {% if product.options[2] %}
+          <div class="product_variant_container">
+            {% assign used = '' %}
+            <label for="select_three">
+              <h3 class="font_medium">{{ product.options[2] }}</h3>
+            </label>
+            <div class="trago_select_container">
+              <select id='select_three' onchange="updateProductInformation()">
+                {% for variant in product.variants %}
+                  {% unless used contains variant.option3 %}
+                    <option value="{{ variant.option2 }}">{{ variant.option3}}</option>
+                    {% capture used %}
+                      {{ used }} {{ variant.option3 }}{% endcapture %}
+                  {% endunless %}
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+        {% endif %}
+
+      {% endif %}
+
+      <!-- Quantity -->
+
+      <div class="product_variant_container">
+        <label for="quantity">
+          <h3 class="font_medium">Quantity</h3>
+        </label>
+        <div class="quantity_input_container">
+          <input min="1" type="number" id="quantity" name="quantity" onchange="updateProductInformation()" value="1"/>
+          <div class="quantity_controls">
+            <div class="quantity_arrow quantity_up">▲</div>
+            <div class="quantity_arrow quantity_down">▼</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Price -->
+
+      <h2 class="text_blue font_medium product_price" id="product_price">{{ product.selected_or_first_available_variant.price | money }}</h2>
+
+      <!-- Add To Cart -->
+
+      <input type="submit" name="add" id="add_to_cart" data-variant-id="{{ product.variants.first.id }}" class="trago_button blue" value="Add To Cart">
+
+      <!-- Ajax Message -->
+
+      <p class="ajax_message"></p>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script>
+
+  // Function to get the value of the checked radio button in the form.
+  function getRadioVal(form, name) {
+    var val;
+    var radios = form.elements[name];
+
+    for (var i = 0, len = radios.length; i < len; i++) {
+      if (radios[i].checked) {
+        val = radios[i].value;
+        break;
+      }
+    }
+    return val;
+  }
+
+// Function runs every time a variant radio button or select dropdown changes.
+  function updateProductInformation() {
+
+// Save the option select values
+    {% if product.options[0] %}
+      {% if product.options[0] == 'Color' %}
+        var opt1 = getRadioVal(document.getElementById('product_form'), 'color');
+      {% else %}
+        var opt1 = document.getElementById('select_one').value;{% endif %}
+    {% endif %}
+    {% if product.options[1] %}
+      var opt2 = document.getElementById('select_two').value;{% endif %}
+    {% if product.options[2] %}
+      var opt3 = document.getElementById('select_three').value;{% endif %}
+
+// Capture the quantity and save it as a liquid variable
+    var quantity = document.getElementById('quantity').value;{% capture quantity %}quantity{% endcapture %}var id = '';
+
+// Loop through all of the variants to check if the option values match any of the variant combinations
+    {% for v in product.variants %}
+      if (
+        opt1 =="{{ v.option1 }}"{% if product.options[1] %} && opt2 =="{{ v.option2 }}"{% endif %}{% if product.options[2] %} && opt3 =="{{ v.option3 }}"{% endif %}
+      ) { // Save the ID for the specific variant combination.
+        var id = {{ v.id }};
+
+// Save the price given the quantity the user has selected. Once multiplied then format the price using the js api.
+        var fullPrice = {{ quantity }} * {{ v.price }};
+        var formattedPrice = Shopify.formatMoney(fullPrice, "{{ shop.money_format }}");
+      }
+    {% endfor %}
+
+// URL Query String
+    console.log(window.location.search);
+
+// If variant has an id then set the cart to the selected variant and change the price field.
+    if (id != '') {
+      document.getElementById('add_to_cart').setAttribute('data-variant-id', id);
+      document.getElementById('product_price').innerHTML = formattedPrice;
+    } else {
+      document.getElementById('add_to_cart').setAttribute('data-variant-id', id);
+      document.getElementById('product_price').innerHTML = 'Unavailable';
+    }
+  }
+</script>

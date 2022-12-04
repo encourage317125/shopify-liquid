@@ -1,0 +1,243 @@
+{% comment %}
+JavaScript Method Click Buy Button in footer.liquid
+{% endcomment %}
+
+{%- style -%}
+  {% assign cart_popup_box_shadow = settings.color_borders | color_modify: 'alpha', 0.5 %}
+
+  .cart-popup {
+    box-shadow: 1px 1px 10px 2px {{ cart_popup_box_shadow }};
+  }
+
+  .cart-popup-wrapper {
+      width: 33rem;
+  }
+
+  .full-height {
+    box-shadow: unset !important;
+    display: flex;
+    height: 89vh;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 0.83rem 0.83rem 0.83rem;
+  }
+  .full-height #shopify-section-cart-template {
+    overflow-y: hidden;
+  }
+  .full-height #shopify-section-cart-template .page-width {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .full-height #shopify-section-cart-template form {
+    overflow-y: hidden;
+    height: 70vh;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 100%;
+  }
+  .full-height #shopify-section-cart-template div .cart-note,
+  .full-height #shopify-section-cart-template div .cart-header {
+    display: none;
+  }
+  #shopify-section-cart-template > div > div:nth-child(1) > form > div > div > div.grid__item.text-right.small--text-center.medium-up--one-half {
+    width: 100%;
+  }
+  .full-height #shopify-section-cart-template form table {
+    overflow-y: hidden;
+    /*height: 63vh;*/
+    height: auto;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  /*.full-height #shopify-section-cart-template form table > tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-between;
+    flex-wrap: nowrap;
+  }*/
+
+  .full-height #shopify-section-cart-template form table .list-view-item__title {
+    font-size: 1em;
+  }
+
+  .full-height #shopify-section-cart-template form table tr.cart__row {
+    margin: 0 auto;
+  }
+  .full-height #shopify-section-cart-template form table .cart__row--heading {
+    display: none;
+  }
+  .full-height #shopify-section-cart-template form .cart__footer {
+    position: absolute;
+    bottom: 4rem;
+    right: 12px;
+    width: 96%;
+    z-index: 1011;
+    background: #fff;
+    height: 124px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .full-height #shopify-section-cart-template form .cart__footer .cart__shipping {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .full-height #shopify-section-cart-template form div.cart-subtotal {
+    display: flex;
+    justify-content: space-between;
+  }
+  .full-height .popup-cart #CartPopupHeading {
+    margin: 0 auto;
+    padding: 0.28rem 0 !important;
+  }
+
+  .cart-popup-wrapper > div > div.cart-popup__header > button {
+    padding: 0 !important;
+  }
+
+  body:has(.full-height) ._xo5f1 > div {
+    left: 19px!important;
+    bottom: 5rem!important;
+  }
+
+  body > div.cart-popup-wrapper > div.cart-popup.full-height > div.cart-popup-item.popup-cart > form > table > thead > tr > th:nth-child(1) {
+    width: 66.33% !important;
+  }
+
+  .full-height .cart td,
+  .full-height .cart th {
+    padding: 2px 0px;
+  }
+
+  .full-height .popup-cart {
+    overflow-y: scroll !important;
+  }
+  
+  .soundest-form-image-left-open {
+    z-index: 10;
+  }
+
+  .PageOverlay {
+    background: #363636;
+    height: 100vh;
+    left: 0;
+    opacity: 0;
+    overflow-y: no-scroll !important;
+    overflow-x: hidden !important;
+    position: fixed;
+    top: 0;
+    transition: opacity 0.4s ease-in-out,visibility 0.4s ease-in-out;
+    visibility: hidden;
+    width: 100vw;
+    z-index: 2147483649;
+  }
+
+  .is-visible {
+    opacity: .5;
+    visibility: visible;
+  }
+
+  .is-behind {
+    z-index: 0 !important;
+  }
+
+  .cart-popup-wrapper .cart-popup__header {
+    justify-content: center;
+    align-content: center;
+    padding: 0 .83rem;
+  }
+  .cart-popup-wrapper .cart-popup__header.cart-popup-congrats {
+    height: 73px;
+    background: linear-gradient(90deg, rgb(0 0 0) 0%, #7f00ff 100%) !important; /*#008678 #01a295 #87fef2 */
+    text-align: center;
+  }
+  .cart-popup-wrapper .cart-popup__header.cart-popup-congrats > h3 {
+    font-size: 20px;
+    color: #defffc !important;
+    margin-bottom: 0;
+    font-weight: 300 !important;
+  }
+  .cart-popup-wrapper .cart-popup__header.cart-popup-congrats > h3 > span {
+    font-weight: 800 !important;
+    color: #87fef2 !important;
+  }
+
+  .full-height .payment-icons {
+    width: 100%;
+    margin-top: 14px;
+  }
+
+  .full-height .cart__submit {
+    width: 100%;
+    height: 50px;
+    margin-top: 8px !important;
+    margin-left: 0px !important;
+  }
+  .cart-popup-wrapper {
+    background-color: white!important;
+  }
+
+  @media screen and (max-width:479px) {
+    .full-height #shopify-section-cart-template {
+      overflow-y: hidden;
+    }
+    .cart-popup-wrapper {
+      width: 100%;
+    }
+    .full-height #shopify-section-cart-template form table {
+        border-collapse: separate;
+        border-spacing: 0 1.5em;
+        margin: 0 auto;
+    }
+    .cart-popup-wrapper .cart-popup__header.cart-popup-congrats > h3 {
+      font-size: 1.1rem;
+    }
+    .full-height #shopify-section-cart-template form .cart__footer .cart__buttons-container {
+      margin: 0 14px;
+      max-width: unset;
+    }
+  }
+{%- endstyle -%}
+
+<div class="cart-popup-wrapper cart-popup-wrapper--hidden" role="dialog" aria-modal="true" aria-labelledby="CartPopupHeading" data-cart-popup-wrapper>
+    <div class="cart-popup__header">
+      <h2 id="CartPopupHeading" class="cart-popup__heading">{{ 'cart.popup.added_to_cart' | t }}</h2>
+      <button class="cart-popup__close" aria-label="{{ 'general.accessibility.close_modal' | t }}" data-cart-popup-close>{% include 'icon-close' %}</button>
+    </div>
+    <div class="cart-popup__header cart-popup-congrats">
+      <h3 class="h3"> 🎉 <span>Gute Wahl!</span> Hier sind deine Produkte:</h3>
+    </div>
+  <div class="cart-popup {% if settings.cart_full_height %}full-height{% endif %}" data-cart-popup tabindex="-1">
+    {% comment %}
+    <div class="cart-popup-item">
+      <div class="cart-popup-item__image-wrapper hide" data-cart-popup-image-wrapper>
+        <div class="cart-popup-item__image cart-popup-item__image--placeholder" data-cart-popup-image-placeholder>
+          <div data-placeholder-size></div>
+          <div class="placeholder-background placeholder-background--animation"></div>
+        </div>
+      </div>
+      <div class="cart-popup-item__description">
+        <div>
+          <h3 class="cart-popup-item__title" data-cart-popup-title></h3>
+          <ul class="product-details" aria-label="{{ 'cart.popup.product_details' | t }}" data-cart-popup-product-details></ul>
+        </div>
+        <div class="cart-popup-item__quantity">
+          <span class="visually-hidden" data-cart-popup-quantity-label></span>
+          <span aria-hidden="true">{{ 'cart.popup.quantity' | t }}:</span>
+          <span aria-hidden="true" data-cart-popup-quantity></span>
+        </div>
+      </div>
+    </div>
+    {% endcomment %}
+    {% unless item.quantity %}
+    {% section 'cart-template' %}
+    {% endunless %}
+    </div>
+  </div>
+</div>

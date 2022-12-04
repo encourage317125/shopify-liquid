@@ -1,0 +1,126 @@
+<div id="collection-wrapper">
+    <button class="menu-arrow-left left svg__item">
+        {%include 'icon-chevron-left' %}
+    </button>
+    <div class="scroll-area">
+        <ul id="collection-menu" class="site-nav grid grid--uniform">
+        {% for collection in collections %}
+            <li class="grid__item {{ grid_item_width }}">
+                {% include 'collection-menu-item', collection: collection %}
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <button class="svg__item menu-arrow-right right" style="display: none;">
+        {%include 'icon-chevron-right' %}
+    </button>
+</div>
+
+{% style %}
+#collection-wrapper {
+    display: flex;
+    height: 100%;
+    margin-bottom: 2.33rem;
+}
+#collection-wrapper .svg__item {
+    display: none;
+}
+#collection-menu {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    transition-property: transform;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 0 !important;
+}
+#collection-menu::-webkit-scrollbar {
+  display: none;
+}
+.left {
+  display: none;
+}
+
+.left-arrow {
+  display: none;
+}
+.scroll-area {
+  overflow-x: auto;
+  height: 100%;
+  -ms-overflow-style: none;
+  -webkit-scrollbar-width: none;
+  -moz-scrollbar-width: none;
+  scrollbar-width: none;
+}
+#collection-menu li.grid-item > span > a {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+#collection-menu > li > span > a div.collection-image {
+    width: 80px;    
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover !important;
+    margin: 0 auto;
+    border: 1px solid #008678;
+}
+#collection-menu > li > span > div {
+    display: block;
+    font-size: 12px;
+    hyphens: auto;
+    line-height: 13px;
+    margin-top: 8px;
+    font-weight: 800 !important;
+}
+
+#collection-menu li.grid__item > span > a {
+    padding: 0px 0px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    #collection-wrapper .svg__item {
+        display: flex;
+        align-items: center;
+    }
+    #collection-menu {
+        overflow-y: hidden !important;
+        overflow-x: auto;
+        vertical-align: middle;
+        margin: 0 auto !important;
+        max-width: 100%;
+    }
+    #collection-menu > li > span > div {
+        font-size: 11px;
+        padding: .33rem 0px 0px 0px !important;
+    }
+}   
+{% endstyle%}
+
+<script type="text/javascript">
+    // Show gradient and left/right arrows only if scrollable
+$(".scroll-area").each((i, el) => {
+  $(el).parent().find(".right")[el.scrollWidth > el.clientWidth ? "show" : "hide"]();
+});
+
+// Show/hide gradient and arrows on scroll
+$('.scroll-area').scroll((e) => {
+  const fullWidth = $(e.target)[0].scrollWidth - $(e.target)[0].offsetWidth - 1;
+  const left = $(e.target).scrollLeft()
+
+  $(e.target).parent().find(".left, .left-arrow")[left > 0 ? "show" : "hide"]();
+  $(e.target).parent().find(".right, .right-arrow")[left < fullWidth ? "show" : "hide"]();
+});
+
+// Scroll on left/right arrow mouse down
+let intervalId;
+$(".left-arrow, .right-arrow").on("mousedown", (e) => {
+  const scroll = $(e.target).closest(".sc-head-menu-wrap").find(".scroll-area");
+  intervalId = setInterval(() => {
+    const left = scroll.scrollLeft();
+    scroll.scrollLeft(e.target.classList.contains("left-arrow") ? left - 10 : left + 10);
+  }, 50);
+}).on("mouseup mouseleave", () => {
+  clearInterval(intervalId);
+});
+</script>

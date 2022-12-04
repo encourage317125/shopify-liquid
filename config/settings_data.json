@@ -1,0 +1,1048 @@
+{
+  "current": {
+    "checkout_header_image": "shopify:\/\/shop_images\/Bildschirmfoto_2021-07-26_um_13.19.02.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Wunder_Zahnstocher_Logo_-_Weiss.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "large",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "color_text": "#3a3a3a",
+    "color_body_text": "#333232",
+    "color_sale_text": "#ea0606",
+    "color_button": "#3a3a3a",
+    "color_button_text": "#ffffff",
+    "color_small_button_text_border": "#3a3a3a",
+    "color_text_field_text": "#000000",
+    "color_text_field_border": "#cccccc",
+    "color_text_field": "#ffffff",
+    "color_image_overlay_text": "#ffffff",
+    "color_image_overlay": "#685858",
+    "image_overlay_opacity": 40,
+    "color_borders": "#ebebeb",
+    "color_body_bg": "#ffffff",
+    "type_header_font": "helvetica_n7",
+    "type_header_base_size": 26,
+    "type_base_font": "helvetica_n4",
+    "type_base_size": 15,
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "share_image": "",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/Zahnstochermitgeschmack",
+    "social_pinterest_link": "https:\/\/www.pinterest.de\/0m93jd4j7v5y84i2iuufx4a4q8cyka\/",
+    "social_instagram_link": "https:\/\/www.instagram.com\/wunderzahnstocher\/",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCIgJs6JIpPqIREOXcq-ARcQ",
+    "social_vimeo_link": "",
+    "favicon": "shopify:\/\/shop_images\/32dae328-7081-48f8-a4d7-f228c5f8df87.jpg",
+    "enable_ajax": true,
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "align_logo": "left",
+          "logo": "shopify:\/\/shop_images\/Wunder_Zahnstocher_Logo_-_Schwarz.png",
+          "logo_max_width": 190,
+          "main_linklist": "main-menu",
+          "message": true,
+          "home_page_only": false,
+          "message_text": "🎉AB SOFORT ERHÄLTLICH: WUNDER ZAHNSTOCHER EINZELN VERPACKT!",
+          "message_link": "",
+          "color_bg": "#000000",
+          "color_text": "#ffffff"
+        }
+      },
+      "feature-row": {
+        "type": "feature-row",
+        "disabled": true,
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Starterpack2.JPG",
+          "layout": "left",
+          "title": "6 GESCHMACKSRICHTUNGEN",
+          "text": "<p>Geschmäcker zur Auswahl: Ananas, Eisbonbon, Apfel, Blaubeere, Kaffee, Kirsch - Menthol<\/p>",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "feature-columns": {
+        "type": "feature-columns",
+        "disabled": true,
+        "blocks": {
+          "feature-columns-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/ananas.JPG",
+              "title": "Titel oder Text hinzufügen",
+              "text": "<p>Blogposts, Produkte oder Promotions mit Ihren Kunden teilen. Nutzen Sie diesen Text, um Produkte zu beschreiben, Details zu Verfügbarkeit und Stil mitzuteilen oder als Ort, wo Reviews oder FAQs stehen.<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "feature-columns-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "title": "Titel oder Text hinzufügen",
+              "text": "<p>Blogposts, Produkte oder Promotions mit Ihren Kunden teilen. Nutzen Sie diesen Text, um Produkte zu beschreiben, Details zu Verfügbarkeit und Stil mitzuteilen oder als Ort, wo Reviews oder FAQs stehen.<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "feature-columns-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "title": "Titel oder Text hinzufügen",
+              "text": "<p>Blogposts, Produkte oder Promotions mit Ihren Kunden teilen. Nutzen Sie diesen Text, um Produkte zu beschreiben, Details zu Verfügbarkeit und Stil mitzuteilen oder als Ort, wo Reviews oder FAQs stehen.<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "feature-columns-0",
+          "feature-columns-1",
+          "feature-columns-2"
+        ],
+        "settings": {
+          "title": "",
+          "align_text": "left"
+        }
+      },
+      "collection": {
+        "type": "collection",
+        "disabled": true,
+        "settings": {
+          "title": "ZUCKERFREI • NULL KALORIEN • GLUTENFREI • VEGAN \/ KETO FREUNDLICH",
+          "collection": "wunder-zahnstocher",
+          "grid": 4,
+          "rows": 5,
+          "show_vendor": false,
+          "show_view_all": true
+        }
+      },
+      "quotes": {
+        "type": "quotes",
+        "disabled": true,
+        "blocks": {
+          "quotes-0": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Die etwas andre Art des Zahnstochers. Tolle Geschichte für Zahnstocherfans und solche die es werden wollen!<br\/>Die Verpackung macht das Erlebnis perfekt. Geschmacklich bin ich positiv überrascht, hätte es nicht so intensiv und langanhaltend erwartet. Klare Kaufempfehlung!<\/p>",
+              "author": "Carla"
+            }
+          },
+          "quotes-1": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Die Lieferung erfolgte in nicht mal 1 1\/2 Werktagen. Habe nach einer Alternative zum Rauchen gesucht und versuche es nun damit!!! Geschmack hat mich direkt umgehauen...alles in allem ein top Produkt.<\/p>",
+              "author": "Pascal"
+            }
+          },
+          "quotes-2": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Schnelle Lieferung...super Produkt so in Deutschland noch nie gefunden...toller intensiver Beeren Geschmack....die edle Metalldose macht echt was her ist sicher auch eine tolle Geschenk Idee ...vielen Dank werde auf jeden Fall weitere Sorten kaufen und empfehle das Produkt zu 100% weiter .<\/p>",
+              "author": "Sabine"
+            }
+          }
+        },
+        "block_order": [
+          "quotes-0",
+          "quotes-1",
+          "quotes-2"
+        ],
+        "settings": {
+          "title": "Das sagen unsere Kunden"
+        }
+      },
+      "image-bar": {
+        "type": "image-bar",
+        "disabled": true,
+        "blocks": {
+          "1597069225302": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bildschirmfoto_2021-07-26_um_12.54.09.png",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          },
+          "image-bar-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bildschirmfoto_2021-11-12_um_14.41.59.png",
+              "alignment": "top",
+              "link": "",
+              "cta_label": ""
+            }
+          },
+          "image-bar-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bildschirmfoto_2022-01-03_um_22.11.48.png",
+              "alignment": "bottom",
+              "link": "",
+              "cta_label": ""
+            }
+          },
+          "image-bar-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bildschirmfoto_2021-07-26_um_12.55.04.png",
+              "alignment": "top",
+              "link": "",
+              "cta_label": ""
+            }
+          }
+        },
+        "block_order": [
+          "1597069225302",
+          "image-bar-1",
+          "image-bar-0",
+          "image-bar-2"
+        ],
+        "settings": {
+          "section_height": "medium"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "title": "Quick-Links",
+              "menu": "footer"
+            }
+          },
+          "footer-1": {
+            "type": "newsletter",
+            "disabled": true,
+            "settings": {
+              "title": "Newsletter-Anmeldung"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "footer-1"
+        ],
+        "settings": {
+          "company_benefits": true,
+          "company_benefits_icon_1": "shopify:\/\/shop_images\/Bildschirmfoto_2021-06-18_um_14.00.11.png",
+          "company_benefits_content_1": "Hergestellt in Deutschland",
+          "company_benefits_text_1": "",
+          "company_benefits_icon_2": "shopify:\/\/shop_images\/Bildschirmfoto_2021-06-18_um_14.03.00.png",
+          "company_benefits_content_2": "Kostenloser Versand Deutschlandweit",
+          "company_benefits_text_2": "",
+          "company_benefits_icon_3": "shopify:\/\/shop_images\/Bildschirmfoto_2021-06-18_um_14.07.57.png",
+          "company_benefits_content_3": "Hohe Kundenzufriedenheit",
+          "company_benefits_text_3": "",
+          "company_benefits_icon_4": "shopify:\/\/shop_images\/TS_Guetesiegel.png",
+          "company_benefits_content_4": "Trusted Shops Käuferschutz",
+          "company_benefits_text_4": "",
+          "show_payment_icons": true,
+          "color_footer_bg": "#f6f6f6",
+          "color_footer_text": "#333232",
+          "show_locale_selector": true,
+          "show_currency_selector": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "blendout_etrustwidget": true,
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "product_show_payment_icons": true,
+          "icon_1": "shopify:\/\/shop_images\/icons-kostenloser-versand-100x100px_88e26c7f-f94b-445b-84ae-d57c58d8cbbd.png",
+          "content_1": "Kostenloser Versand innerhalb DE",
+          "icon_2": "shopify:\/\/shop_images\/icons-100-tage-geld-zurueck-garantie-100x100px_e79bf531-d45d-4152-b5b8-83abac74dc21.png",
+          "content_2": "100 Tage Rückgaberecht",
+          "icon_3": "shopify:\/\/shop_images\/icons-kauf-auf-rechnung-100x100px_bd941474-b5d4-45ec-aab1-3f28bbed2b3c.png",
+          "content_3": "Kauf auf Rechnung",
+          "icon_4": "shopify:\/\/shop_images\/icons-nachhaltig-100x100px_67e0a3db-36a6-4b04-b435-8e287f5f407f.png",
+          "content_4": "Umweltfreundlich - Nachhaltig",
+          "content_2_1": "",
+          "content_2_2": "",
+          "content_2_3": "",
+          "content_2_4": "",
+          "show_shipping_time": true,
+          "enable_payment_button": false,
+          "shipping_icon_1": "shopify:\/\/shop_images\/icon-einfache-zahnreinigung-unterwegs.png",
+          "shipping_content_1": "Zuckerfrei",
+          "shipping_icon_2": "shopify:\/\/shop_images\/icon-kalorienfreier-snack.png",
+          "shipping_content_2": "Kalorienfrei",
+          "shipping_icon_3": "shopify:\/\/shop_images\/icon-glutenfrei.png",
+          "shipping_content_3": "Glutenfrei",
+          "shipping_icon_4": "shopify:\/\/shop_images\/icon-atemfrisch-dank-fruchtiger-aromen.png",
+          "shipping_content_4": "Vegan",
+          "show_share_buttons": true,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "Das könnte dir auch gefallen",
+          "show_vendor": false
+        }
+      },
+      "16240173579645bffb": {
+        "type": "logo-bar",
+        "disabled": true,
+        "blocks": {
+          "16240173579645bffb-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bildschirmfoto_2021-06-18_um_14.00.11.png",
+              "link": ""
+            }
+          },
+          "16240173579645bffb-1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bildschirmfoto_2021-06-18_um_14.03.00.png",
+              "link": ""
+            }
+          },
+          "16240173579645bffb-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bildschirmfoto_2021-06-18_um_14.07.57.png",
+              "link": ""
+            }
+          },
+          "16240173579645bffb-3": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bildschirmfoto_2021-06-18_um_14.11.07.png",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "16240173579645bffb-0",
+          "16240173579645bffb-1",
+          "16240173579645bffb-2",
+          "16240173579645bffb-3"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "layout": "grid",
+          "grid": 4,
+          "rows": 2,
+          "show_collection_image": true,
+          "show_vendor": false,
+          "sort_enable": true,
+          "tags_enable": true
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_ajax_enable": true,
+          "cart_notes_enable": true
+        }
+      },
+      "16274913652127ad5b": {
+        "type": "judgeme_carousel_section",
+        "settings": {
+          "maxwidth": 1640
+        }
+      },
+      "1627491561dd105475": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": false,
+          "section_title": "Aromatisierte Zahnstocher",
+          "text": "<p>Wunder-Zahnstocher mit Geschmack machen Dich startklar für die kleinen Abenteuer des Alltags. Mit kühlem bis fruchtigem Aroma, das natürlich gut schmeckt – und Dir garantiert immer einen frischen Atem verleiht! ...<\/p><p>Wunder erleben nur Diejenigen, die auch an Wunder glauben.. Taste it...you will love it!<\/p><p><a href=\"\/collections\/wunder-zahnstocher\" title=\"Gesamtkatalog\">katalog anzeigen<\/a><\/p>",
+          "text_size": "large"
+        }
+      },
+      "16274936796b25de53": {
+        "type": "feature-row",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/GD_autoxauto-70_uncropped_1000_1547552952_image.jpg",
+          "layout": "right",
+          "title": "Weil nicht nur wir gerne frisch aufatmen",
+          "text": "<p>Unsere Zahnstocher bestehen aus nachhaltigem weißen <strong>FSC-zertifiziertem<\/strong> Birkenholz. Zudem investieren wir einen Teil jeder verkauften Packung Zahnstocher in ausgewählte <a href=\"\/blogs\/news\" target=\"_blank\" title=\"News\"><strong>Klimaprojekte<\/strong><\/a>. So trägst du dazu bei, unserem Planeten beim Atmen zu helfen.<\/p>",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "16274937177b3a8bfe": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": false,
+          "section_title": "100 % Geld-zurück-Garantie auf Zahnstocher mit Geschmack",
+          "text": "<p>Deine Bestellung war defekt oder schmeckt dir nicht? Dann schick sie uns zurück. Wir erstatten sie komplett, zügig und ohne Umstände.<a href=\"\/pages\/kontakt\" target=\"_blank\" title=\"Kontakt\"> <em><strong>Bei Fragen erreichst du uns hier.<\/strong><\/em><\/a><\/p>",
+          "text_size": "medium"
+        }
+      },
+      "162807441871e17db7": {
+        "type": "hero",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/white_bg.jpg",
+          "alignment": "bottom",
+          "hero_layout": "full_width",
+          "hero_size": "x-small",
+          "text_size": "large",
+          "title": "",
+          "text": "",
+          "button_label": "Mehr über unsere Klimaprojekte erfahren",
+          "button_link": "shopify:\/\/blogs\/news\/myhoney-bienenpatenschaft-we-are-live"
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "blog_show_author": true,
+          "blog_show_date": true,
+          "show_share_buttons": true
+        }
+      },
+      "1628097403cd979c6c": {
+        "type": "feature-row",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/BLAUBEERE__1.jpg",
+          "layout": "left",
+          "title": "NEU: WUNDER ZAHNSTOCHER EINZELN VERPACKT",
+          "text": "<p>Schnapp Dir jetzt unsere Brandneue <strong>aromageschützte Einzelverpackung<\/strong>. Ideal für Zuhause oder Unterwegs. Deine Zahnstocher mit Geschmack bleiben in dieser Verpackung garantiert <strong>immer frisch!<\/strong><\/p>",
+          "button_label": "Jetzt Einzelverpackung entdecken",
+          "button_link": "shopify:\/\/collections\/wunder-zahnstocher-einzeln-verpackt"
+        }
+      },
+      "1630157352a431014a": {
+        "type": "feature-row",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/IMG_7305_Kopie.jpg",
+          "layout": "right",
+          "title": "Warum solltest du Zahnstocher mit Geschmack verwenden? Warum auch nicht?",
+          "text": "<p>Denn unsere Wunder Zahnstocher bieten dir ein völlig neues Erlebnis, das du auf keinen Fall verpassen solltest.<br\/><br\/>Unsere Wunder Zahnstocher mit Geschmack hydratisieren den Mund, um die Symptome von Xerostomie, auch bekannt als trockener Mund, zu lindern. Zudem helfen dir die Zahnstocher unerwünschte  Gewohnheiten wie <strong>Nägel kauen<\/strong>, <strong>Snacks<\/strong> und das <strong>Rauchen<\/strong> loszuwerden!<br\/><br\/>Ideal für den Alltag und im Büro, denn die Zahnstocher gibt es in einer praktischen To-Go Box!<\/p>",
+          "button_label": "Jetzt Wunder-Metallboxen Entdecken",
+          "button_link": "shopify:\/\/collections\/metall-boxen"
+        }
+      },
+      "1634118145e2ffc019": {
+        "type": "custom-content",
+        "blocks": {
+          "2eb3dc8a-2dae-418e-b150-d1880b40ec6b": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/csBGmpTQegs",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          },
+          "352ad2fe-1341-4f7b-8271-a0add9c58499": {
+            "type": "html",
+            "settings": {
+              "code": "<style>\n#shopify-section-1628097403cd979c6c{\n\tpadding-bottom: 0px;\n}\n#shopify-section-1628097403cd979c6c{\n\tpadding-bottom: 0px;\n}\n\n@media(min-width: 760px){\n#shopify-section-16274936796b25de53{\n\tmargin-top: -20px;\nmargin-bottom: -20px;\n}\n}\n\n\n#shopify-section-16274936796b25de53{\npadding-bottom: 10px;\n}\n.hero__overlay::before{\nbackground-color: white;\n}\n.hero__inner{\npadding: 0px;\n}\n\t#shopify-section-1643800547a78d2076{\n\t\tpadding-bottom: 0px !important;\n\t\tdisplay: none !important;\n\t}\n\t#Hero-1643800547a78d2076{\n\t    background-position: left center !important;\n    \tbackground-size: cover !important;\n\t}\n\n@media(max-width: 760px){\n\t#shopify-section-16433268347b155fa2,\n\t#shopify-section-16433268347b155fa2 .custom-content{\n\t\tdisplay: none !important;\n\t}\n\t#shopify-section-1627491561dd105475{\n\t\tpadding-top: 10px !important;\n\t\tpadding-bottom: 0px !important;\n\t}\n\n\n\n\n\n\n \n\t#shopify-section-16433268347b155fa2{\n\t\tbackground: none !important;\n\t}\n\t#shopify-section-16433268347b155fa2 p,\n\t#shopify-section-16433268347b155fa2 h3,\n\t#shopify-section-16433268347b155fa2 h4{\n\t\tcolor: black !important;\n\t\tfont-size: 16px !important;\n\t}\n}\n\n\n\t#shopify-section-1643325535384941df{\n\t\tpadding-top: 20px;\n\t\tpadding-bottom: 20px;\n\t}\n\t#shopify-section-1643325535384941df p{\n\t\tfont-size: 20px;\n\t\tpadding-left: 10px;\n\t\tpadding-right: 10px;\n\t    line-height: 1.2;\n\t}\n\t#shopify-section-1639395671628f7dd4 .feature-row__item{\n\t\tflex: 0 1 30%;\n\t}\n\t#shopify-section-1639395671628f7dd4 .feature-row__text--left{\n\t\tflex: 0 1 70%;\n\t}\n\t#shopify-section-16433268347b155fa2{\n\t\tbackground-position: center center; \n\t\tbackground-image: url(\"https:\/\/cdn.shopify.com\/s\/files\/1\/0438\/7464\/8226\/files\/Banner-2.jpg\");\n\t\tpadding-top: 425px;\n    \tpadding-bottom: 80px;\n\t\tbackground-size: cover;\n\n\t} \n\t#shopify-section-16433268347b155fa2{\n\t\tcolor: white;\n\t}\n\t#shopify-section-16433268347b155fa2 h4{\n\t\tfont-size: 32px;\n\t\tcolor: white;\n\t}\n\t#shopify-section-16433268347b155fa2 p{\n\t\tfont-size: 20px;\n\t\tcolor: white;\n\t}\n\t#MainContent{\n\t\tpadding-top: 0px;\n\n\t}\n\t#shopify-section-16433268347b155fa2 a{ \n\t\tmargin-top: 20px;\n\t    -moz-user-select: none;\n\t    -ms-user-select: none;\n\t    -webkit-user-select: none;\n\t    user-select: none;\n\t    -webkit-appearance: none;\n\t    -moz-appearance: none;\n\t    appearance: none;\n\t    display: inline-block;\n\t    width: auto;\n\t    text-decoration: none;\n\t    text-align: center;\n\t    vertical-align: middle;\n\t    cursor: pointer;\n\t    border: 1px solid transparent;\n\t    border-radius: 2px;\n\t    padding: 8px 15px;\n\t    background-color: #3a3a3a;\n\t    color: #fff;\n\t    font-family: Helvetica,Helvetica Neue,Arial,Lucida Grande,sans-serif;\n\t    font-style: normal;\n\t    font-weight: 700;\n\t    text-transform: uppercase;\n\t    letter-spacing: .08em;\n\t    white-space: normal;\n\t    font-size: 13px;\n\t}\n \n\t#shopify-section-1634118145e2ffc019 .section-header,\n\t#shopify-section-1643330490b8aaef0f .section-header,\n\t#shopify-section-16318862758468ab36 .section-header,\n\t#shopify-section-1643328242c892c029 .section-header{\n\t\tmargin-bottom: 30px !important;\n\t}\n\n\t#shopify-section-1643330490b8aaef0f .jdgm-preview-badge,\n\t#shopify-section-1643330490b8aaef0f .hr--invisible, \n\n\t#shopify-section-16318862758468ab36 .jdgm-preview-badge,\n\t#shopify-section-16318862758468ab36 .hr--invisible, \n\n\t#shopify-section-1643328242c892c029 .jdgm-preview-badge,\n\t#shopify-section-1643328242c892c029 .hr--invisible{\n\t\tdisplay: none !important;\n\t}\n\t#shopify-section-1643330490b8aaef0f .product-card__image-with-placeholder-wrapper, \n\t#shopify-section-1643328242c892c029 .product-card__image-with-placeholder-wrapper{\n\t\tmin-height: 250px !important;\n\t\tmax-height: 250px !important;\n\t} \n\n\n@media(max-width: 760px){\n\t#shopify-section-1643330490b8aaef0f .product-card__image-with-placeholder-wrapper, \n\t#shopify-section-1643328242c892c029 .product-card__image-with-placeholder-wrapper{\n\t\tmin-height: auto !important;\n\t\tmax-height: auto !important;\n\t} \n\n\t#shopify-section-16433268347b155fa2 .custom__item--ad93fa4c-9b2b-42b1-a664-a6817dae42a3{\n\t\tdisplay: none;\n\t}\n\t#shopify-section-16433268347b155fa2{\n\t\t\tpadding: 35px 10px;\n\t\t\tfont-size: 14px !important; \n\t}\n\t#shopify-section-16433268347b155fa2 \t.page-width{\n\t\tpadding: 0px !important;  \n\t}\n\t#shopify-section-16433268347b155fa2{\n\t\t\tbackground-position: left center;\n\t}\n}\n\n\n\t#shopify-section-1643330490b8aaef0f .text-center a,\n\t#shopify-section-16318862758468ab36 .text-center a,\n\t#shopify-section-1643328242c892c029 .text-center a{\n\t\tmargin-top: 50px !important;\n\t}\n\t#shopify-section-1643330490b8aaef0f,\n\t#shopify-section-1639395671628f7dd4,\n\t#shopify-section-16318862758468ab36,\n\t#shopify-section-1643325535384941df{\n\t\tpadding-top: 30px !important;\n\t}\n\t#shopify-section-162807441871e17db7,\n\t#shopify-section-16274936796b25de53,\n\t#shopify-section-1628097403cd979c6c,\n\t#shopify-section-1627493309f2f8e837,\n\t#shopify-section-1630157383c6747755,\n\t#shopify-section-16274913652127ad5b .jdgm-carousel-wrapper{\n\t\tpadding-top: 0px !important;\n\t}\n\t#shopify-section-16240173579645bffb,\n\t#shopify-section-1630157352a431014a,\n\t#shopify-section-1634118145e2ffc019{\n\t\tpadding-top: 20px !important;\n\n\t}\n<\/style>",
+              "width": "50%"
+            }
+          }
+        },
+        "block_order": [
+          "2eb3dc8a-2dae-418e-b150-d1880b40ec6b",
+          "352ad2fe-1341-4f7b-8271-a0add9c58499"
+        ],
+        "settings": {
+          "title": "Schmecke die Frische"
+        }
+      },
+      "1639395671628f7dd4": {
+        "type": "feature-row",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/05.01-post.jpg",
+          "layout": "left",
+          "title": "WUNDER NEWS!",
+          "text": "<p><strong>Ab sofort gibt es zu jeder Set*-Bestellung die passende Geschenkverpackung gratis dazu.<\/strong><\/p><p><\/p><p><em><strong>*Folgende Sets kommen mit einer Geschenkverpackung:<\/strong><\/em><em> Starterpack, Tasty Pack, Fresh Pack, Fruit Pack, Cool fruit pack & Fresh Breath Pack.<\/em><\/p><p><\/p><p><em><strong>Taste it....you will love it!<\/strong><\/em><\/p>",
+          "button_label": "Jetzt Einkaufen",
+          "button_link": "shopify:\/\/collections\/wunder-zahnstocher"
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "layout": "grid",
+          "blog_show_author": true,
+          "blog_show_date": true
+        }
+      },
+      "16433268347b155fa2": {
+        "type": "custom-content",
+        "blocks": {
+          "16433268347b155fa2-1": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon_V3.png",
+              "width": "50%",
+              "alignment": "center"
+            }
+          },
+          "16433268347b155fa2-0": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "text": "<p><a href=\"\/collections\/wunder-zahnstocher\" title=\"Gesamtkatalog\">katalog anzeigen<\/a><\/p><p><\/p>",
+              "width": "50%",
+              "alignment": "bottom-middle",
+              "align_text": "left"
+            }
+          },
+          "ad93fa4c-9b2b-42b1-a664-a6817dae42a3": {
+            "type": "html",
+            "settings": {
+              "code": "",
+              "width": "50%"
+            }
+          }
+        },
+        "block_order": [
+          "16433268347b155fa2-1",
+          "16433268347b155fa2-0",
+          "ad93fa4c-9b2b-42b1-a664-a6817dae42a3"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "1643800547a78d2076": {
+        "type": "hero",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Banner-2.jpg",
+          "alignment": "center",
+          "hero_layout": "full_width",
+          "hero_size": "small",
+          "text_size": "medium",
+          "title": "",
+          "text": "",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "164750857116aa77cb": {
+        "type": "custom-content",
+        "blocks": {
+          "164750857116aa77cb-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Mobile_dc650c0d-34a9-4060-beef-b7e2f69c1c35.jpg",
+              "width": "100%",
+              "alignment": "center"
+            }
+          },
+          "3f6f452b-b2be-4ffd-bf12-12069f80ef10": {
+            "type": "html",
+            "settings": {
+              "code": "<style>\n#shopify-section-164750857116aa77cb,\n#shopify-section-164750857116aa77cb>div{\n\tpadding: 0px !important;\n}\n\t#shopify-section-164750857116aa77cb{\n\t\tdisplay: none !important;\n\t}\n\n\t#shopify-section-1627491561dd105475 a{\n\t\tdisplay: none !important; \n\t\t-webkit-user-select: none;\n    user-select: none;\n    -webkit-appearance: none;\n    -moz-appearance: none;\n    appearance: none;\n    width: auto;\n    text-decoration: none;\n    text-align: center;\n    vertical-align: middle;\n    cursor: pointer;\n    border: 1px solid transparent;\n    border-radius: 2px;\n    padding: 8px 15px;\n    background-color: #3a3a3a;\n    color: white;\n    font-family: Helvetica, \"Helvetica Neue\", Arial, \"Lucida Grande\", sans-serif;\n    font-style: normal;\n    font-weight: 700;\n    text-transform: uppercase;\n    letter-spacing: 0.08em;\n    white-space: normal;\n    font-size: 13px;\n\t}\n\n@media(max-width: 760px){\n\t#shopify-section-1643800547a78d2076{\n\t\tdisplay: none !important;\n\t}\n\t#shopify-section-164750857116aa77cb{\n\t\tdisplay: block !important;\n\t}\n\t#shopify-section-1627491561dd105475 a{\n    display: inline-block !important;\n\t}\n}\n<\/style>",
+              "width": "50%"
+            }
+          }
+        },
+        "block_order": [
+          "164750857116aa77cb-1",
+          "3f6f452b-b2be-4ffd-bf12-12069f80ef10"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "16612480906880ab4f": {
+        "type": "collection",
+        "settings": {
+          "title": "WUNDER ZAHNSTOCHER-REFILL PACKS - KOSTENLOSER VERSAND INNERHALB DEUTSCHLANDS",
+          "collection": "wunder-refill-packs",
+          "grid": 3,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": true
+        }
+      },
+      "1661332419836760a5": {
+        "type": "collection",
+        "settings": {
+          "title": "ENTDECKE DEINEN LIEBLINGSGESCHMACK - KOSTENLOSER VERSAND FÜR ALLE PRODUKTE IM SHOP",
+          "collection": "metall-boxen",
+          "grid": 3,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": true
+        }
+      },
+      "16614477310cc529b7": {
+        "type": "collection",
+        "settings": {
+          "title": "SICHER DIR EINEN UNSERER BESTSELLER",
+          "collection": "bestsellerliste",
+          "grid": 4,
+          "rows": 1,
+          "show_vendor": false,
+          "show_view_all": false
+        }
+      },
+      "a27566e9-9e37-4987-8c09-5d1ef255286f": {
+        "type": "collection",
+        "settings": {
+          "title": "Wunder zahnstocher Einzelverpackung - 100% Frische Garantiert!",
+          "collection": "wunder-zahnstocher-einzeln-verpackt",
+          "grid": 3,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": true
+        }
+      }
+    },
+    "content_for_index": [
+      "1643800547a78d2076",
+      "16433268347b155fa2",
+      "164750857116aa77cb",
+      "16614477310cc529b7",
+      "1627491561dd105475",
+      "1661332419836760a5",
+      "16274937177b3a8bfe",
+      "16274913652127ad5b",
+      "1628097403cd979c6c",
+      "16612480906880ab4f",
+      "1634118145e2ffc019",
+      "1630157352a431014a",
+      "a27566e9-9e37-4987-8c09-5d1ef255286f",
+      "16274936796b25de53",
+      "162807441871e17db7",
+      "1639395671628f7dd4",
+      "16240173579645bffb"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+          }
+        },
+        "hero-1": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "large",
+            "text_size": "large"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {
+          }
+        },
+        "feature-columns": {
+          "type": "feature-columns",
+          "blocks": {
+            "feature-columns-0": {
+              "type": "text_block",
+              "settings": {
+              }
+            },
+            "feature-columns-1": {
+              "type": "text_block",
+              "settings": {
+              }
+            },
+            "feature-columns-2": {
+              "type": "text_block",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "feature-columns-0",
+            "feature-columns-1",
+            "feature-columns-2"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "grid": 4
+          }
+        },
+        "hero-2": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "quotes": {
+          "type": "quotes",
+          "blocks": {
+            "quotes-0": {
+              "type": "quote",
+              "settings": {
+              }
+            },
+            "quotes-1": {
+              "type": "quote",
+              "settings": {
+              }
+            },
+            "quotes-2": {
+              "type": "quote",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "quotes-0",
+            "quotes-1",
+            "quotes-2"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "image-bar": {
+          "type": "image-bar",
+          "blocks": {
+            "image-bar-0": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "image-bar-1": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "image-bar-2": {
+              "type": "image",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "image-bar-0",
+            "image-bar-1",
+            "image-bar-2"
+          ],
+          "settings": {
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "link_list",
+              "settings": {
+              }
+            },
+            "footer-1": {
+              "type": "newsletter",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1"
+          ],
+          "settings": {
+            "show_payment_icons": true
+          }
+        }
+      },
+      "content_for_index": [
+        "hero-1",
+        "feature-row",
+        "feature-columns",
+        "collection",
+        "hero-2",
+        "quotes",
+        "image-bar"
+      ]
+    },
+    "Light": {
+      "color_text": "#162950",
+      "color_body_text": "#6d6d6d",
+      "color_sale_text": "#DA2F0C",
+      "color_borders": "#e4e4e4",
+      "color_button": "#DA2F0C",
+      "color_button_text": "#ffffff",
+      "color_small_button_text_border": "#162950",
+      "color_text_field": "#ffffff",
+      "color_text_field_text": "#162950",
+      "color_text_field_border": "#909090",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#3d3d3d",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#f8f8f8",
+      "type_header_font": "muli_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "muli_n4",
+      "type_base_size": 18,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#e8f3f6",
+      "checkout_heading_font": "Roboto",
+      "checkout_body_font": "Source Sans Pro",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#23314e",
+      "checkout_error_color": "#ff6d6d",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "align_logo": "left",
+            "logo": "",
+            "logo_max_width": 135,
+            "main_linklist": "main-menu",
+            "message": true,
+            "color_bg": "#162950",
+            "color_text": "#ffffff"
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "alignment": "center",
+            "hero_size": "x-large",
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center center"
+              }
+            },
+            "1492095993817": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "1492095993817"
+          ],
+          "settings": {
+            "slideshow_height": "medium",
+            "text_size": "medium",
+            "autorotate": false,
+            "autorotate_speed": 5
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "grid": 3,
+            "rows": 1,
+            "show_vendor": true,
+            "show_view_all": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "show_share_buttons": true,
+            "media_size": "medium",
+            "enable_image_zoom": true,
+            "enable_video_looping": false
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "layout": "grid",
+            "grid": 2,
+            "rows": 2,
+            "show_collection_image": true,
+            "show_vendor": false,
+            "sort_enable": true,
+            "tags_enable": true
+          }
+        },
+        "1492033809691": {
+          "type": "map",
+          "settings": {
+          }
+        },
+        "1492033877875": {
+          "type": "quotes",
+          "blocks": {
+            "1492033877875-0": {
+              "type": "quote",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1492033877875-0"
+          ],
+          "settings": {
+          }
+        },
+        "1492033924902": {
+          "type": "custom-content",
+          "blocks": {
+            "1492033924902-0": {
+              "type": "text",
+              "settings": {
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492033924902-0"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "1492096252560": {
+          "type": "collection-list",
+          "blocks": {
+            "1492096252560-0": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            },
+            "1492096252560-1": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            },
+            "1492096252560-2": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1492096252560-0",
+            "1492096252560-1",
+            "1492096252560-2"
+          ],
+          "settings": {
+            "grid": 3
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "grid",
+            "blog_show_author": true,
+            "blog_show_date": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_author": true,
+            "blog_show_date": true,
+            "show_share_buttons": true
+          }
+        },
+        "cart-template": {
+          "type": "cart-template",
+          "settings": {
+            "cart_notes_enable": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {
+            "color_footer_bg": "#f8f8f8",
+            "color_footer_text": "#6d6d6d"
+          }
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "slideshow",
+        "1492033924902",
+        "1492096252560",
+        "1492033877875",
+        "1492033809691"
+      ]
+    }
+  }
+}

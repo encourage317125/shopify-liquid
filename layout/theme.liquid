@@ -1,0 +1,352 @@
+<!doctype html>
+<html class="no-js" lang="{{ shop.locale }}">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="{{ settings.color_button }}">
+
+    {%- if canonical_url != blank  -%}
+      <link rel="canonical" href="{{ canonical_url }}">
+    {%- endif -%}
+
+    {%- if settings.favicon != blank -%}
+      <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+    {%- endif -%}
+
+    {%- capture seo_title -%}
+      {%- if request.page_type == 'search' and search.performed == true -%}
+        {{ 'general.search.heading' | t: count: search.results_count }}: {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+      {%- else -%}
+        {{ page_title }}
+      {%- endif -%}
+      {%- if current_tags -%}
+        {%- assign meta_tags = current_tags | join: ', ' -%} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+      {%- endif -%}
+      {%- if current_page != 1 -%}
+        &ndash; {{ 'general.meta.page' | t: page: current_page }}
+      {%- endif -%}
+      {%- assign escaped_page_title = page_title | escape -%}
+      {%- unless escaped_page_title contains shop.name -%}
+        &ndash; {{ shop.name }}
+      {%- endunless -%}
+    {%- endcapture -%}
+    <title>{{ seo_title | strip }}</title>
+
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    {% include 'social-meta-tags' %}
+
+    {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+
+    <script>
+      var theme = {
+        breakpoints: {
+          medium: 750,
+          large: 990,
+          widescreen: 1400
+        },
+        strings: {
+          addToCart: {{ 'products.product.add_to_cart' | t | json }},
+          soldOut: {{ 'products.product.sold_out' | t | json }},
+          unavailable: {{ 'products.product.unavailable' | t | json }},
+          regularPrice: {{ 'products.product.regular_price' | t | json }},
+          salePrice: {{ 'products.product.sale_price' | t | json }},
+          sale: {{ 'products.product.on_sale' | t | json }},
+          fromLowestPrice: {{ 'products.product.from_lowest_price_html' | t: lowest_price: '[price]' | json }},
+          vendor: {{'products.product.vendor' | t | json }},
+          showMore: {{ 'general.filters.show_more' | t | json }},
+          showLess: {{ 'general.filters.show_less' | t | json }},
+          searchFor: {{ 'general.search.search_for' | t | json }},
+          addressError: {{ 'sections.map.address_error' | t | json }},
+          addressNoResults: {{ 'sections.map.address_no_results' | t | json }},
+          addressQueryLimit: {{ 'sections.map.address_query_limit_html' | t | json }},
+          authError: {{ 'sections.map.auth_error_html' | t | json }},
+          newWindow: {{ 'general.accessibility.link_messages.new_window' | t | json }},
+          external: {{ 'general.accessibility.link_messages.external' | t | json }},
+          newWindowExternal: {{ 'general.accessibility.link_messages.new_window_and_external' | t | json }},
+          removeLabel: {{ 'cart.label.remove' | t: product: '[product]' | json }},
+          update: {{ 'cart.label.update' | t | json }},
+          quantity: {{ 'cart.label.quantity' | t | json }},
+          discountedTotal: {{ 'cart.label.discounted_total' | t | json }},
+          regularTotal: {{ 'cart.label.regular_total' | t | json }},
+          priceColumn: {{ 'cart.label.price_column' | t | json }},
+          quantityMinimumMessage: {{ 'products.product.quantity_minimum_message' | t | json }},
+          cartError: {{ 'cart.general.cart_error' | t | json }},
+          removedItemMessage: {{ 'cart.general.removed_item_html' | t: quantity: '[quantity]', link: '[link]' | json }},
+          unitPrice: {{ 'products.product.unit_price_label' | t | json }},
+          unitPriceSeparator: {{ 'general.accessibility.unit_price_separator' | t | json }},
+          oneCartCount: {{ 'cart.popup.cart_count' | t: count: 1 | json }},
+          otherCartCount: {{ 'cart.popup.cart_count' | t: count: '[count]' | json }},
+          quantityLabel: {{ 'cart.popup.quantity_label' | t: quantity_count: '[count]' | json }},
+          products: {{ 'general.search.products' | t | json }},
+          loading: {{ 'general.search.loading' | t | json }},
+          number_of_results: {{ 'general.search.number_of_results' | t: result_number: '[result_number]', results_count: '[results_count]' | json }},
+          number_of_results_found: {{ 'general.search.number_of_results_found' | t: results_count: '[results_count]' | json }},
+          one_result_found: {{ 'general.search.one_result_found' | t | json }}
+        },
+        moneyFormat: {{ shop.money_format | json }},
+        moneyFormatWithCurrency: {{ shop.money_with_currency_format | json }},
+        settings: {
+          predictiveSearchEnabled: {{ settings.predictive_search_enabled | json }},
+          predictiveSearchShowPrice: {{ settings.predictive_search_show_price | json }},
+          predictiveSearchShowVendor: {{ settings.predictive_search_show_vendor | json }}
+        }
+      }
+
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
+
+    {%- if request.page_type contains 'customers/' -%}
+      <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+    {%- endif -%}
+
+    <script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>
+    <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+
+
+    <!-- Taboola Pixel Code -->
+    <script type='text/javascript'>
+      window._tfa = window._tfa || [];
+      window._tfa.push({notify: 'event', name: 'page_view', id: 1182795});
+      !function(t, f, a, x) {
+        if (!document.getElementById(x)) {
+          t.async = 1;
+          t.src = a;
+          t.id = x;
+          f.parentNode.insertBefore(t, f);
+        }
+      }(document.createElement('script'), document.getElementsByTagName('script')[0], '//cdn.taboola.com/libtrc/unip/1182795/tfa.js', 'tb_tfa_script');
+    </script>
+    <!-- End of Taboola Pixel Code -->
+
+    {{ content_for_header }}
+
+
+    <script>
+      !function(w, d, t) {
+        w.TiktokAnalyticsObject = t;
+        var ttq = w[t] = w[t] || [];
+        ttq.methods = [
+          "page",
+          "track",
+          "identify",
+          "instances",
+          "debug",
+          "on",
+          "off",
+          "once",
+          "ready",
+          "alias",
+          "group",
+          "enableCookie",
+          "disableCookie"
+        ],
+        ttq.setAndDefer = function(t, e) {
+          t[e] = function() {
+            t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+          }
+        };
+        for (var i = 0; i < ttq.methods.length; i++) 
+          ttq.setAndDefer(ttq, ttq.methods[i]);
+        
+
+        ttq.instance = function(t) {
+          for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) 
+            ttq.setAndDefer(e, ttq.methods[n]);
+          
+
+          return e
+        },
+        ttq.load = function(e, n) {
+          var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+          ttq._i = ttq._i || {},
+          ttq._i[e] = [],
+          ttq._i[e]._u = i,
+          ttq._t = ttq._t || {},
+          ttq._t[e] = + new Date,
+          ttq._o = ttq._o || {},
+          ttq._o[e] = n || {};
+          var o = document.createElement("script");
+          o.type = "text/javascript",
+          o.async = !0,
+          o.src = i + "?sdkid=" + e + "&lib=" + t;
+          var a = document.getElementsByTagName("script")[0];
+          a.parentNode.insertBefore(o, a)
+        };
+
+        ttq.load('C3JD0S28DUFB4DH4THN0');
+        ttq.page();
+      }(window, document, 'ttq');
+    </script>
+
+    {% include 'judgeme_core' %}
+    {% include 'fa_translate_core' %}
+
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer'
+            ? '&l=' + l
+            : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-P2MKDSS');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f, b, e, v, n, t, s) {
+        if (f.fbq) 
+          return;
+        
+
+        n = f.fbq = function() {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments)
+        };
+        if (! f._fbq) 
+          f._fbq = n;
+        
+
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '316528269706250');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=316528269706250&ev=PageView&noscript=1"/></noscript>
+    <!-- End Facebook Pixel Code -->
+
+  </head>
+
+  <body class="template-{{ request.page_type | handle }}">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2MKDSS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+
+    {% section 'header' %}
+
+    {%- if settings.enable_ajax -%}
+      {% include 'cart-popup' %}
+    {%- endif -%}
+
+    <div class="page-container drawer-page-content" id="PageContainer">
+
+      <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
+        {{ content_for_layout }}
+      </main>
+
+      {% section 'footer' %}
+
+      <div id="slideshow-info" class="visually-hidden" aria-hidden="true">
+        {{- 'sections.slideshow.navigation_instructions' | t -}}
+      </div>
+
+    </div>
+
+    <ul hidden>
+      <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
+      <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
+    </ul>
+
+    <!-- **BEGIN** Hextom FSB Integration // Main Include - DO NOT MODIFY -->
+    {% render 'hextom_fsb_main', product: product, customer: customer %}
+    <!-- **END** Hextom FSB Integration // Main Include - DO NOT MODIFY -->
+
+    {{ '//cdn.shopify.com/s/files/1/0194/1736/6592/t/1/assets/booster-page-speed-optimizer.js?23' | script_tag }}
+  </body>
+  {% comment %}
+    JavaScript Method Click Buy Button (#buyButton) show .PageOverlay and toggle z-index via class on #shopify-section-header
+  {% endcomment %}
+  {%- if settings.cart_full_height and template != 'cart' -%}
+    <script>
+      let elPageOverlay = document.querySelector('.PageOverlay');
+      let elSectionHeader = document.querySelector('#shopify-section-header');
+      let elBody = document.getElementsByTagName('body')[0];
+      document.querySelector('#buyButton').addEventListener('click', function() {
+        elPageOverlay.classList.add('is-visible');
+        elBody.classList.add('overflow-hidden');
+      });
+
+      document.querySelector('.PageOverlay').addEventListener('click', function() {
+        elPageOverlay.classList.remove('is-visible');
+        elBody.classList.remove('overflow-hidden');
+      });
+      document.querySelector('.cart-popup__close').addEventListener('click', function() {
+        elPageOverlay.classList.remove('is-visible');
+        elBody.classList.remove('overflow-hidden');
+      });
+    </script>
+    <style>
+      .overflow-hidden {
+        overflow: hidden !important;
+      }
+
+      @media screen and (max-width:479px) {
+        .PageOverlay.is-visible {
+          display: none;
+        }
+        .full-height {
+          height: 71vh; /*90vh*/
+        }
+        .cart-popup-wrapper {
+          width: 100%;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 100vh;
+          z-index: 100000000000000000000000000000000000000000000000000 !important;
+        }
+        .cart-popup-wrapper .cart-popup__header.cart-popup-congrats > h3 {
+          font-size: 1.1rem;
+        }
+        .full-height #shopify-section-cart-template form .cart__footer {
+          height: auto;
+          bottom: 0;
+          right: 0;
+        }
+
+        .full-height #shopify-section-cart-template form .cart__footer .cart__shipping {
+          padding: 0 13px;
+        }
+        .full-height #shopify-section-cart-template form .cart__footer .cart-subtotal__title,
+        .full-height #shopify-section-cart-template form .cart__footer span.cart-subtotal__price {
+          font-size: 12px !important;
+        }
+        .full-height #shopify-section-cart-template form div.cart-subtotal {
+          padding: 0 13px;
+        }
+        ._t57f0l {
+          display: none !important;
+          visibility: hidden !important;
+        }
+      }
+    </style>
+  {%- endif -%}
+</html>
