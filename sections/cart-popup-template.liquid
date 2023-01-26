@@ -1,5 +1,4 @@
 <div class="page-width" data-section-id="{{ section.id }}" data-section-type="cart-template" data-ajax-enabled="{{ section.settings.cart_ajax_enable }}">
-
   <div data-cart-wrapper>
     <form action="{{ routes.cart_url }}" method="post" novalidate class="cart">
       {% if template != 'cart' %}
@@ -14,7 +13,6 @@
             <th class="text-right small--hide" scope="col">{{ 'cart.label.total' | t }}</th>
           </thead>
         {% endunless %}
-
         <tbody data-cart-line-items>
           {%- for item in cart.items -%}
             <tr class="cart__row" data-cart-item data-cart-item-key="{{ item.key }}" data-cart-item-url="{{ item.url }}" data-cart-item-title="{{ item.title }}" data-cart-item-index="{{ forloop.index }}" data-cart-item-quantity="{{ item.quantity }}">
