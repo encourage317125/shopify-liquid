@@ -7,20 +7,7 @@
 
   {%- assign collection = collections[section.settings.collection] -%}
 
-  {% case section.settings.grid %}
-    {% when 2 %}
-      {%- assign max_height = 530 -%}
-      {%- assign grid_item_width = 'medium-up--one-half' -%}
-    {% when 3 %}
-      {%- assign max_height = 345 -%}
-      {%- assign grid_item_width = 'small--one-half medium-up--one-third' -%}
-    {% when 4 %}
-      {%- assign max_height = 250 -%}
-      {%- assign grid_item_width = 'small--one-half medium-up--one-quarter' -%}
-    {% when 5 %}
-      {%- assign max_height = 195 -%}
-      {%- assign grid_item_width = 'small--one-half medium-up--one-fifth' -%}
-  {% endcase %}
+  {% case section.settings.grid %}{% endcase %}
 
   {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
   <ul class="grid grid--uniform grid--view-items">
@@ -31,31 +18,14 @@
     {% else %}
 
       {% for i in (1..product_limit) %}
-        <li class="grid__item grid__item--{{ section.id }} {{ grid_item_width }}">
-          <div class="grid-view-item product-card">
-            <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="/products">
-              <span class="visually-hidden">{{ 'homepage.onboarding.product_title' | t }}{{ collection.products }}</span>
-            </a>
-            <div class="grid-view-item__image-wrapper">
-              {% capture current %}
-                {% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-              {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
-            </div>
-            <div class="h4 grid-view-item__title" aria-hidden="true">{{ 'homepage.onboarding.product_title' | t }}</div>
-            {% include 'product-price' %}
-          </div>
-        </li>
+        <li class="grid__item grid__item--{{ section.id }} {{ grid_item_width }}"></li>
       {% endfor %}
     {% endfor %}
   </ul>
 
   {% if section.settings.show_view_all %}
-    <hr class="hr--invisible" aria-hidden="true"/>
-    <div class="text-center">
-      <a href="/product" class="btn" aria-label="{{ 'collections.general.view_all_label' | t: collection_name: collection.title }}">
-        {{ 'collections.general.view_all' | t }}
-      </a>
-    </div>
+    <hr class="hr--invisible" aria-hidden="true" />
+    <div class="text-center"></div>
   {% endif %}
 
 </div>
